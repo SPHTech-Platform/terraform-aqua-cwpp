@@ -244,7 +244,7 @@ TLS:
 # The variables could be provided via values.yaml file as shown below
 # or using cli command, for example:  --set extraEnvironmentVars.http_proxy="1.1.1.1",extraEnvironmentVars.https_proxy="2.2.2.2"
 extraEnvironmentVars:
-  AQUA_DISABLE_KUBE_BENCH_SCAN: true
+  AQUA_DISABLE_KUBE_BENCH_SCAN: false
   # http_proxy: < >
   # https_proxy: < >
   # no_proxy: < >
