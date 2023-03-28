@@ -1,3 +1,7 @@
+### ################ ###
+### Global Variables ###
+### ################ ###
+
 global:
   #Please specify k8s platform acronym. Allowed values are aks, eks, gke, openshift, tkg, tkgi, k8s
   # aks = Azure Kubernetes Service
@@ -59,6 +63,11 @@ ke_ReplicaCount: "1"
 aqua_enable_cache: "yes"
 # default value is 60
 aqua_cache_expiration_period: "60"
+
+
+### ############# ###
+### Kube Enforcer ###
+### ############# ###
 
 # Kube-Enforcer Image
 image:
