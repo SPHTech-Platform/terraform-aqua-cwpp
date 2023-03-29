@@ -6,8 +6,8 @@ locals {
   )
 
   helm_values_defaults = [templatefile("${path.module}/templates/values.yaml", {
-    kube_enforcer_token   = var.create_kube_enforcer_group ? aquasec_enforcer_groups.kube_enforcer.token : data.aquasec_enforcer_groups.kube_enforcer.token,
-    enforcer_token        = var.create_enforcer_group ? aquasec_enforcer_groups.agent.token : data.aquasec_enforcer_groups.agent.token,
+    kube_enforcer_token   = var.create_kube_enforcer_group ? one(aquasec_enforcer_groups.kube_enforcer[*].token) : data.aquasec_enforcer_groups.kube_enforcer.token,
+    enforcer_token        = var.create_enforcer_group ? one(aquasec_enforcer_groups.agent[*].token) : data.aquasec_enforcer_groups.agent.token,
     enforcer_version      = var.enforcer_version,
     enabled_express_mode  = var.enabled_express_mode,
     platform              = var.platform,
