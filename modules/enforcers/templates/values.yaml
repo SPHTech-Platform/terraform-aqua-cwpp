@@ -38,8 +38,8 @@ global:
     name: "aqua-registry"
     repositoryUriPrefix: "registry.aquasec.com" # for dockerhub - "docker.io"
     registry: "registry.aquasec.com" #REQUIRED only if create is true, for dockerhub - "index.docker.io/v1/"
-    username: ${aquasec_username}
-    password: ${aquasec_password}
+    username: ${aquasec_registry_username}
+    password: ${aquasec_registry_password}
 
 # If serviceAccount.create=false and serviceAccount.name not defined
 # then will be used serviceAccount aqua-sa which created by aqua-server helm chart

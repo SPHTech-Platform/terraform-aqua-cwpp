@@ -52,14 +52,14 @@ variable "aqua_gateway_endpoint" {
   type        = string
 }
 
-variable "aquasec_username" {
-  description = "aqua cloud username - Value set in Variables"
+variable "aquasec_registry_username" {
+  description = "aqua registry username - Value set in Variables"
   type        = string
   sensitive   = true
 }
 
-variable "aquasec_password" {
-  description = "aqua cloud password - Value set in Variables"
+variable "aquasec_registry_password" {
+  description = "aqua registry password - Value set in Variables"
   type        = string
   sensitive   = true
 }
