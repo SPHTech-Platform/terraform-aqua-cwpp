@@ -1,10 +1,10 @@
 terraform {
-  required_version = ">= 1.3.0"
+  required_version = ">= 1.3"
 
   required_providers {
     helm = {
-      source  = "hashicorp/helm"
-      version = ">= 2.7.1"
+      source  = "hashicorp/aws"
+      version = ">= 4.28"
     }
 
     aquasec = {
