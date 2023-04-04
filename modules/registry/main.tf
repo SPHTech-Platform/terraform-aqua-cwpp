@@ -6,18 +6,9 @@ resource "aquasec_integration_registry" "integration_registry" {
   type = var.type
   url  = var.region
 
-  dynamic "options" {
-    for_each = [
-      {
-        option = "ARNRole"
-        value  = aws_iam_role.aqua_cwpp.arn
-      },
-    ]
-
-    content {
-      option = options.value["option"]
-      value  = try(options.value["value"], null)
-    }
+  options {
+    option = "ARNRole"
+    value  = aws_iam_role.aqua_cwpp.arn
   }
 
   auto_cleanup       = true

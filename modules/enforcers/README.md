@@ -33,8 +33,8 @@
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_aqua_gateway_endpoint"></a> [aqua\_gateway\_endpoint](#input\_aqua\_gateway\_endpoint) | Aqua Gateway Endpoint | `string` | n/a | yes |
-| <a name="input_aquasec_password"></a> [aquasec\_password](#input\_aquasec\_password) | aqua cloud password - Value set in Variables | `string` | n/a | yes |
-| <a name="input_aquasec_username"></a> [aquasec\_username](#input\_aquasec\_username) | aqua cloud username - Value set in Variables | `string` | n/a | yes |
+| <a name="input_aquasec_registry_password"></a> [aquasec\_registry\_password](#input\_aquasec\_registry\_password) | aqua registry password - Value set in Variables | `string` | n/a | yes |
+| <a name="input_aquasec_registry_username"></a> [aquasec\_registry\_username](#input\_aquasec\_registry\_username) | aqua registry username - Value set in Variables | `string` | n/a | yes |
 | <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | Cluster name registered with Aqua in Infrastructure tab | `string` | `"aqua-sec"` | no |
 | <a name="input_create_enforcer_group"></a> [create\_enforcer\_group](#input\_create\_enforcer\_group) | Create an Enforcer group | `bool` | `false` | no |
 | <a name="input_create_kube_enforcer_group"></a> [create\_kube\_enforcer\_group](#input\_create\_kube\_enforcer\_group) | Create a Kube Enforcer group | `bool` | `false` | no |
