@@ -10,7 +10,7 @@ data "aws_iam_policy_document" "registry_trust" {
 
     principals {
       type        = "AWS"
-      identifiers = ["arn:aws:iam::402136654778:role/yvbbb-293e75e127-worker-role"]
+      identifiers = var.assume_role_arn
     }
   }
 }

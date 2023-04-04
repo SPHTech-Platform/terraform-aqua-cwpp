@@ -20,3 +20,9 @@ variable "prefix" {
   type        = string
   default     = "aws"
 }
+
+variable "assume_role_arn" {
+  description = "Assume Role ARN Provide by AquaSec Team"
+  type        = list(string)
+  default     = []
+}

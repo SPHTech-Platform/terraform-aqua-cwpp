@@ -32,6 +32,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_assume_role_arn"></a> [assume\_role\_arn](#input\_assume\_role\_arn) | Assume Role ARN Provide by AquaSec Team | `list(string)` | `[]` | no |
 | <a name="input_prefix"></a> [prefix](#input\_prefix) | Prefix for the registry | `string` | `"aws"` | no |
 | <a name="input_region"></a> [region](#input\_region) | region of the registry | `string` | `"ap-southeast-1"` | no |
 | <a name="input_type"></a> [type](#input\_type) | Registry type (HUB / V1 / V2 / ENGINE / AWS / GCR). | `string` | `"AWS"` | no |
