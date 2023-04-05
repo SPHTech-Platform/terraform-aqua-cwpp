@@ -52,14 +52,14 @@ variable "aqua_gateway_endpoint" {
   type        = string
 }
 
-variable "aquasec_username" {
-  description = "aqua cloud username - Value set in Variables"
+variable "aquasec_registry_username" {
+  description = "aqua registry username - Value set in Variables"
   type        = string
   sensitive   = true
 }
 
-variable "aquasec_password" {
-  description = "aqua cloud password - Value set in Variables"
+variable "aquasec_registry_password" {
+  description = "aqua registry password - Value set in Variables"
   type        = string
   sensitive   = true
 }
@@ -68,4 +68,28 @@ variable "cluster_name" {
   description = "Cluster name registered with Aqua in Infrastructure tab"
   type        = string
   default     = "aqua-sec"
+}
+
+variable "enforcer_group_id" {
+  description = "The ID of the Enforcer group"
+  type        = string
+  default     = "default"
+}
+
+variable "kube_enforcer_group_id" {
+  description = "The ID of the Kube Enforcer group"
+  type        = string
+  default     = "default kube enforcer group"
+}
+
+variable "create_enforcer_group" {
+  description = "Create an Enforcer group"
+  type        = bool
+  default     = false
+}
+
+variable "create_kube_enforcer_group" {
+  description = "Create a Kube Enforcer group"
+  type        = bool
+  default     = false
 }
