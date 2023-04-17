@@ -486,7 +486,6 @@ enforcer:
       port: 8096
     initialDelaySeconds: 60
     periodSeconds: 30
-  
   resources:
     requests:
       cpu: 350m
