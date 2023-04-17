@@ -174,9 +174,11 @@ webhooks:
   failurePolicy: Ignore
   validatingWebhook:
     name: "kube-enforcer-admission-hook-config"
+    timeout: 2
     annotations: {}
   mutatingWebhook:
     name: "kube-enforcer-me-injection-hook-config"
+    timeout: 2
     annotations: {}
       #cert-manager.io/inject-ca-from: < namespace >/< certsSecret.name >
       #If you are using webhooks.certManager=true, so need to add cert-manager annotations
@@ -219,11 +221,11 @@ livenessProbe:
 
 resources:
   requests:
-    cpu: 100m
-    memory: 128Mi
+    cpu: 250m
+    memory: 1.0Gi
   limits:
-    cpu: 200m
-    memory: 256Mi
+    cpu: 500m
+    memory: 1.0Gi
 
 nodeSelector: {}
 tolerations: []
@@ -484,13 +486,14 @@ enforcer:
       port: 8096
     initialDelaySeconds: 60
     periodSeconds: 30
+  
   resources:
     requests:
-      cpu: 100m
-      memory: 128Mi
+      cpu: 350m
+      memory: 1.5Gi
     limits:
-      cpu: 200m
-      memory: 256Mi
+      cpu: 1000m
+      memory: 1.5Gi
   nodeSelector: { }
   tolerations: [ ]
   podAnnotations: { }
