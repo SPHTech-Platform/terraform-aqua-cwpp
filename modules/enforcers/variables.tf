@@ -5,7 +5,7 @@ variable "helm_config_defaults" {
     name             = "aqua-helm"
     chart            = "kube-enforcer"
     repository       = "https://helm.aquasec.com"
-    version          = "2022.4.22"
+    version          = "2022.4.23"
     namespace        = "aqua"
     create_namespace = true
     description      = "Aqua security enforcer helm Chart deployment configuration"
