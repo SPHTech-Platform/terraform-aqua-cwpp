@@ -174,12 +174,14 @@ webhooks:
   failurePolicy: Ignore
   validatingWebhook:
     name: "kube-enforcer-admission-hook-config"
+    timeout: 2
     annotations: {}
   mutatingWebhook:
     name: "kube-enforcer-me-injection-hook-config"
+    timeout: 2
     annotations: {}
-      #cert-manager.io/inject-ca-from: < namespace >/< certsSecret.name >
-      #If you are using webhooks.certManager=true, so need to add cert-manager annotations
+      # cert-manager.io/inject-ca-from: < namespace >/< certsSecret.name >
+      # If you are using webhooks.certManager=true, so need to add cert-manager annotations
 
 securityContext:
   runAsUser: 11431
