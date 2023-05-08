@@ -166,20 +166,22 @@ role:
 roleBinding:
   name: "aqua-kube-enforcer"
 
-# webhooks:
-#   # set this field true if you're using cert-manager and don't need to pass a caBundle
-#   certManager: false
-#   # Add base64 value of the CA cert/Ca Bundle/RootCA Cert if certificates are not generated from cert-manager to webhooks.caBundle
-#   caBundle: ""
-#   failurePolicy: Ignore
-#   validatingWebhook:
-#     name: "kube-enforcer-admission-hook-config"
-#     annotations: {}
-#   mutatingWebhook:
-#     name: "kube-enforcer-me-injection-hook-config"
-#     annotations: {}
-#       #cert-manager.io/inject-ca-from: < namespace >/< certsSecret.name >
-#       #If you are using webhooks.certManager=true, so need to add cert-manager annotations
+webhooks:
+  # set this field true if you're using cert-manager and don't need to pass a caBundle
+  certManager: false
+  # Add base64 value of the CA cert/Ca Bundle/RootCA Cert if certificates are not generated from cert-manager to webhooks.caBundle
+  caBundle: ""
+  failurePolicy: Ignore
+  validatingWebhook:
+    name: "kube-enforcer-admission-hook-config"
+    timeout: 2
+    annotations: {}
+  mutatingWebhook:
+    name: "kube-enforcer-me-injection-hook-config"
+    timeout: 2
+    annotations: {}
+      # cert-manager.io/inject-ca-from: < namespace >/< certsSecret.name >
+      # If you are using webhooks.certManager=true, so need to add cert-manager annotations
 
 securityContext:
   runAsUser: 11431
