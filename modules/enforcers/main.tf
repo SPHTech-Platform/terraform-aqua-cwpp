@@ -23,6 +23,7 @@ resource "aquasec_enforcer_groups" "kube_enforcer" {
 }
 
 module "enforcers" {
+  #checkov:skip=CKV_TF_1: "Ensure Terraform module sources use a commit hash"
   source  = "SPHTech-Platform/release/helm"
   version = "~> 0.1.0"
 
