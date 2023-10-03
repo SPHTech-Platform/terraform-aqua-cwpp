@@ -221,11 +221,10 @@ livenessProbe:
 
 resources:
   requests:
-    cpu: 250m
-    memory: 1.0Gi
-  limits:
     cpu: 500m
-    memory: 1.0Gi
+    memory: 1Gi
+  limits:
+    memory: 1Gi
 
 nodeSelector: {}
 tolerations: []
@@ -488,10 +487,9 @@ enforcer:
     periodSeconds: 30
   resources:
     requests:
-      cpu: 350m
+      cpu: 500m
       memory: 1.5Gi
     limits:
-      cpu: 1000m
       memory: 1.5Gi
   nodeSelector: { }
   tolerations: [ ]
